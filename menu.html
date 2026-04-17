@@ -1,45 +1,98 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Wildlife Exploration Menu</title> 
-</head> 
-<body> 
-    <header> 
-        <h1>Explore Botswana's Big Five</h1> 
-        <nav> 
-            <a href="index.html">Home</a> | 
-            <a href="behaviours.html">Behaviours</a> | 
-            <a href="conservation.html">Conservation</a> | 
-            <a href="safari-tips.html">Safari Tips</a> |
-            <a href="contact.html">Contact</a> 
-        </nav> 
-    </header> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildlife Informational Page | Animalia</title>
+</head>
+<body>
 
-    <main> 
-        <h2>Project Navigation Menu</h2>
-        <p>Welcome to the central portal for my Big Five research project. Use the links below to explore specific sections:</p>
+    <header>
+        <div id="brand-area">
+            <span>LOGO</span>
+            <h1>Animalia</h1>
+        </div>
         
-        <ul>
-            <li>
-                <a href="behaviours.html"><strong>Wildlife Behaviours</strong></a>: 
-                Learn about the unique survival strategies of Botswana’s apex predators and "ecosystem engineers" like the African Elephant.[3, 4]
-                
-            </li>
-            <li>
-                <a href="conservation.html"><strong>Conservation & Conversations</strong></a>: 
-                Discover how Botswana uses Community-Based Natural Resource Management (CBNRM) and anti-poaching units to protect the Big Five.[3, 5]
-            </li>
-            <li>
-                <a href="safari.html"><strong>Safari Guide & Tips</strong></a>: 
-                Plan a safe journey to hotspots like Chobe and Moremi while following essential "Bush Rules".[6, 7]
-            </li>
-        </ul>
-    </main> 
+        <nav id="main-navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="big-five.html">Big five</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="safari-planning.html">Safari</a></li>
+                <li><a href="feedback.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <footer> 
-        <p>&copy; 2026 Bogolo Samoka | Web & Multimedia Development </p> 
-    </footer> 
-</body> 
+    <main>
+        <h2>Wildlife Informational Page</h2>
+
+        <nav id="animal-selector">
+            <button type="button">Lion</button>
+            <button type="button">Elephant</button>
+            <button type="button">Rhinoceros</button>
+            <button type="button">Leopard</button>
+            <button type="button">Buffalo</button>
+        </nav>
+
+        <section id="animal-details">
+            
+            <article id="diet-info">
+                <figure>
+                    <img src="lion-diet.jpg" alt="Visual of Lion Diet">
+                </figure>
+                <div>
+                    <h3>DIET</h3>
+                    <p>Lions are apex predators and carnivores. They primarily hunt large ungulates such as zebra, wildebeest, and buffalo to sustain the pride.[3]</p>
+                </div>
+            </article>
+
+            <article id="habitat-info">
+                <figure>
+                    <img src="lion-habitat.jpg" alt="Visual of Lion Habitat">
+                </figure>
+                <div>
+                    <h3>HABITAT</h3>
+                    <p>They thrive in grasslands, savannas, and open woodlands. They prefer areas with enough cover for stalking and proximity to water sources.[3]</p>
+                </div>
+            </article>
+
+            <section id="behaviours-grid">
+                <h3>BEHAVIOURS</h3>
+                
+                <div class="behaviour-column">
+                    <figure><img src="lion-social.jpg" alt="Social Behaviour Icon"></figure>
+                    <h4>Social Behaviour</h4>
+                    <p>Lions are the only truly social cats, living in prides consisting of related females, their offspring, and a few resident males.[3]</p>
+                </div>
+
+                <div class="behaviour-column">
+                    <figure><img src="lion-comm.jpg" alt="Communication Icon"></figure>
+                    <h4>Communication</h4>
+                    <p>Prides use roaring to signal territory boundaries, along with scent marking and complex body language to maintain social bonds.[3]</p>
+                </div>
+
+                <div class="behaviour-column">
+                    <figure><img src="lion-activity.jpg" alt="Activity Patterns Icon"></figure>
+                    <h4>Activity Patterns</h4>
+                    <p>Lions are crepuscular, meaning they are most active during the cooler hours of dawn and dusk, often resting for 20 hours a day.[3]</p>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <body>
+    <footer>
+        <section id="contact-info">
+            <p>Contact us for safari inquiries in Gaborone, Botswana.</p>
+     <p>&copy;2026 Botswana Big Five Educational Portal. Student Project: Bogolo Samoka</p>
+  </section>
+        <nav id="social-links">
+            <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+        </nav>
+
+    </footer>
+</body>
 </html>
+
+       
