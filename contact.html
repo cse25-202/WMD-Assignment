@@ -8,7 +8,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
-    <title>Contact Me</title> 
+    <title>Contact & Feedback | Botswana Big Five</title> 
 
 </head> 
 
@@ -16,14 +16,22 @@
 
     <header> 
 
-        <h1>Contact Me</h1> 
+        <h1>Animalia</h1>
+      <p>A site that feels like a mini safari before the real one — immersive, educational, and enjoyable.
+             It gives tourists knowledge, excitement, and respect for Botswana’s Big Five animals, while preparing them for  a safe and meaningful safari experience.
+        </p>
 
         <nav> 
 
-            <a href="index.html">Home</a> | 
-            <a href="big-five.html">The Big Five</a> | 
-            <a href="menu.html">Menu</a> | 
-            <a href="contact.html">Contact</a> 
+            <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="bigfive.html">Big-five</a></li>
+        <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+        <li class="nav-item"><a class="nav-link" href="safari.html">Safari Planning</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact and Feedback</a></li>
+      </ul>
+    </div>
 
         </nav> 
 
@@ -33,18 +41,84 @@
 
     <main> 
 
-        <p>If you'd like to get more information, feel free to email me at <a href="mailto:cse25-202@thuto.bac.ac.bw">cse25-202@thuto.bac.ac.bw</a>.</p> 
+        <section id="contact-form-section">
+            <h2>Get in Touch</h2>
+            <p>Have questions about the Big Five or your upcoming trip? Send us a message.</p>
+            
+            <form action="#" method="post">
+                <div>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="user_name" required placeholder="Enter your name">
+                </div>
+
+                <div>
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="user_email" required placeholder="example@email.com">
+                </div>
+
+                <div>
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="user_message" rows="5" required placeholder="How can we help you?"></textarea>
+                </div>
+
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </section>
+
+        <section id="faq">
+            <h3>Frequently Asked Questions</h3>
+
+            <article>
+                <h4>Is this an official tourism website?</h4>
+                <p>No, this is an educational student project designed to provide information about Botswana's Big Five wildlife. For official tourism information, please visit Botswana Tourism Organisation's website.</p>
+            </article>
+
+            <article>
+                <h4>Can you help me book a safari?</h4>
+                <p>This portal provides educational information only. Please contact licensed safari operators in Botswana for booking assistance.</p>
+            </article>
+
+            <article>
+                <h4>How can I support wildlife conservation?</h4>
+                <p>Choose ethical safari operators, never buy wildlife products, respect viewing guidelines, and consider donating to reputable conservation organizations working in Botswana.</p>
+            </article>
+
+            <article>
+                <h4>Where does the information come from?</h4>
+                <p>Information is compiled from wildlife research, conservation organizations, and educational resources about African wildlife and Botswana's ecosystems.</p>
+            </article>
+        </section>
+
+        <section id="map-section">
+            <h3>Interactive Map of Botswana</h3>
+            <p>Explore the national parks, reserves, and rivers where the Big Five are commonly spotted (Chobe River, Okavango Delta, Moremi Reserve).</p>
+            <figure>
+                <div id="interactive-map-container" style="border: 1px solid #000; height: 300px; width: 100%;">
+                   
+                </div>
+                <figcaption>Map showing primary wildlife sightings across Botswana.</figcaption>
+            </figure>
+        </section>   
 
     </main> 
-
+</body>
  
-
+<body>
     <footer> 
 
-        <p>&copy; 2026 Bogolo Samoka</p> 
+         <section id="contact-info">
+            <p>Contact us for safari inquiries in Gaborone, Botswana.</p>
+     <p>&copy;2026 Botswana Big Five Educational Portal. Student Project: Bogolo Samoka</p>
+  </section>
+        <nav id="social-links">
+            <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+        </nav>
+
 
     </footer> 
 
 </body> 
 
 </html>
+
+
