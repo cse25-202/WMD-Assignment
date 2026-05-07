@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animal Profile | Animalia</title>
+  <link rel="stylesheet" href="animalprofile.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Cormorant+Garamond:wght@300;400;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+
+  <!-- ── HEADER ── -->
+  <header>
+    <div id="brand-area">
+      <span class="leaf-icon">🌿</span>
+      <h1>Animalia</h1>
+    </div>
+    <nav id="main-navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="bigfive.html">Big Five</a></li>
+        <li><a href="animalprofile.html" class="active">Animal Profile</a></li>
+        <li><a href="safari.html">Safari Planning</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ── HERO ── -->
+  <div class="page-hero">
+    <span class="hero-tag">Botswana · Wildlife Encyclopedia</span>
+    <h2>Animal <em>Profiles</em></h2>
+    <p class="hero-sub">Explore the diet, habitat, and behaviours of Africa's most iconic wildlife.</p>
+  </div>
+
+  <!-- ── SELECTOR ── -->
+  <nav id="animal-selector">
+    <button class="active" onclick="showAnimal('lion', this)">Lion</button>
+    <button onclick="showAnimal('elephant', this)">Elephant</button>
+    <button onclick="showAnimal('leopard', this)">Leopard</button>
+    <button onclick="showAnimal('buffalo', this)">Buffalo</button>
+    <button onclick="showAnimal('rhino', this)">Rhinoceros</button>
+  </nav>
+
+  <main>
+
+    <!-- ══════════════════════ LION ══════════════════════ -->
+    <div id="panel-lion" class="animal-panel visible">
+
+      <div class="info-row">
+        <article id="lion-diet" class="info-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Lion_waiting_in_Namibia.jpg/1280px-Lion_waiting_in_Namibia.jpg"
+               alt="African Lion – Diet" loading="lazy">
+          <div class="info-card-body">
+            <div class="section-label">Diet</div>
+            <h3>CARNIVORE</h3>
+            <p>Lions are apex predators that primarily hunt large ungulates — zebra, wildebeest, and buffalo — cooperating in coordinated group hunts led by females.</p>
+          </div>
+        </article>
+
+        <article id="lion-habitat" class="info-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Serengeti-Ecosystem-Main.jpg/1280px-Serengeti-Ecosystem-Main.jpg"
+               alt="African savanna habitat" loading="lazy">
+          <div class="info-card-body">
+            <div class="section-label">Habitat</div>
+            <h3>SAVANNA &amp; GRASSLAND</h3>
+            <p>Lions thrive in open grasslands, savannas, and woodlands. They prefer areas with enough cover for stalking prey and proximity to permanent water sources.</p>
+          </div>
+        </article>
+      </div>
+
+      <section class="behaviours-section">
+        <div class="behaviours-header">
+          <div class="section-label">Behaviours</div>
+          <h3>BEHAVIOURAL TRAITS</h3>
+        </div>
+        <div class="behaviours-grid">
+          <div class="behaviour-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Lion_waiting_in_Namibia.jpg/800px-Lion_waiting_in_Namibia.jpg"
+                 alt="Lion social behaviour" loading="lazy">
+            <div class="behaviour-card-body">
+              <h4>Social Behaviour</h4>
+              <p>Lions are the only truly social big cats, living in prides of related females, their cubs, and a small coalition of resident males.</p>
+            </div>
+          </div>
+          <div class="behaviour-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Roaring_lion_2.jpg/800px-Roaring_lion_2.jpg"
+                 alt="Lion roaring – communication" loading="lazy">
+            <div class="behaviour-card-body">
+              <h4>Communication</h4>
+              <p>Prides roar to signal territorial boundaries and use scent marking and body language to maintain complex social bonds across their range.</p>
+            </div>
+          </div>
+          <div class="behaviour-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Camponotus_flavomarginatus_ant.jpg/800px-Camponotus_flavomarginatus_ant.jpg"
+                 alt="Lion resting – activity patterns" loading="lazy"
+                 onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Lion_waiting_in_Namibia.jpg/800px-Lion_waiting_in_Namibia.jpg'">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Lion_waiting_in_Namibia.jpg/800px-Lion_waiting_in_Namibia.jpg"
+                 alt="Lion resting – activity patterns" loading="lazy" style="position:absolute;inset:0;z-index:0;">
+            <div class="behaviour-card-body" style="z-index:2;position:relative;">
+              <h4>Activity Patterns</h4>
+              <p>Lions are crepuscular — most active at dawn and dusk — and may rest for up to 20 hours per day to conserve energy in the heat.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ══════════════════════ ELEPHANT ══════════════════════ -->
+    <div id="panel-elephant" class="animal-panel">
+
+      <div class="info-row">
+        <article class="info-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/African_Bush_Elephant.jpg/1280px-African_Bush_Elephant.jpg"
+               alt="African Elephant feeding" loading="lazy">
+          <div class="info-card-body">
+            <div class="section-label">Diet</div>
+            <h3>HERBIVORE</h3>
+            <p>Elephants are bulk herbivores consuming up to 136 kg of vegetation daily — grasses, leaves, bark, and fruit — spending up to 18 hours feeding.</p>
+          </div>
+        </article>
+
+        <article class="info-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Elephant_at_Amboseli_national_park_against_Mount_Kilimanjaro.jpg/1280px-Elephant_at_Amboseli_national_park_against_Mount_Kilimanjaro.jpg"
+               alt="Elephant in savanna habitat" loading="lazy">
+          <div class="info-card-body">
+            <div class="section-label">Habitat</div>
+            <h3>DIVERSE LANDSCAPES</h3>
+            <p>African elephants inhabit diverse ecosystems — from the Chobe floodplains of Botswana to dense woodland and arid scrubland — always near water.</p>
+          </div>
+        </article>
+      </div>
+
+      <section class="behaviours-section">
+        <div class="behaviours-header">
+          <div class="section-label">Behaviours</div>
+          <h3>BEHAVIOURAL TRAITS</h3>
+        </div>
+        <div class="behaviours-grid">
+          <div class="behaviour-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/African_Bush_Elephant.jpg/800px-African_Bush_Elephant.jpg"
+                 alt="Elephant herd – social behaviour" loading="lazy">
+            <div class="behaviour-card-body">
+              <h4>Social Behaviour</h4>
+              <p>Elephants live in matriarchal herds led by the oldest female. Family bonds are intense — herds cooperate in raising calves and defending against predators.</p>
+            </div>
+          </div>
+          <div class="behaviour-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Elephant_near_ndutu.jpg/800px-Elephant_near_ndutu.jpg"
+                 alt="Elephants communicating" loading="lazy">
+            <div class="behaviour-card-body">
+              <h4>Communication</h4>
+              <p>Elephants communicate through low-frequency infrasound rumbles that travel kilometres, as well as touch, visual signals, and chemical cues.</p>
+            </div>
+          </div>
+          <div class="behaviour-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Elephant_at_Amboseli_national_park_against_Mount_Kilimanjaro.jpg/800px-Elephant_at_Amboseli_national_park_against_Mount_Kilimanjaro.jpg"
+                 alt="Elephant activity patterns" loading="lazy">
+            <div class="behaviour-card-body">
+              <h4>Activity Patterns</h4>
+              <p>Largely diurnal but also active at night, elephants migrate seasonally following rainfall and vegetation, covering vast distances across borders.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ══════════════════════ LEOPARD ══════════════════════ -->
+    <div id="panel-leopard" class="animal-panel">
+
+      <div class="info-row">
+        <article class="info-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Leopard_in_Masai_Mara.jpg/1280px-Leopard_in_Masai_Mara.jpg"
+               alt="Leopard hunting" loading="lazy">
+          <div class="info-card-body">
+            <div class="section-label">Diet</div>
+            <h3>OPPORTUNISTIC CARNIVORE</h3>
+            <p>Leopards are versatile hunters preying on over 90 recorded species — from small rodents to medium-sized antelope — and hoist kills into trees to avoid scavengers.</p>
+          </div>
+        </article>
+
+        <article class="info-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Roaring_lion_2.jpg/1280px-Roaring_lion_2.jpg"
+               alt="Leopard forest habitat" loading="lazy">
+          <div class="info-card-body">
+            <div class="section-label">Habitat</div>
+            <h3>ADAPTABLE TERRAIN</h3>
+            <p>The most habitat-adaptable big cat, leopards thrive in rainforest, thornbush, rocky outcrops, and semi-arid savanna from the Cape to the Sahara.</p>
+          </div>
+        </article>
+      </div>
+
+      <section class="behaviours-section">
+        <div class="behaviours-header">
+          <div class="section-label">Behaviours</div>
+          <h3>BEHAVIOURAL TRAITS</h3>
+        </div>
+        <div class="behaviours-grid">
+          <div class="behaviour-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Leopard_in_Masai_Mara.jpg/800px-Leopard_in_Masai_Mara.jpg"
+                 alt="Solitary leopard" loading="lazy">
+            <div class="behaviour-card-body">
+              <h4>Social Behaviour</h4>
+              <p>Fiercely solitary and territorial, leopards overlap home ranges only briefly to mate. Females raise cubs alone for up to two years.</p>
+            </div>
+          </div>
+          <div class="behaviour-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Leopard_in_Masai_Mara.jpg/800px-Leopard_in_Masai_Mara.jpg"
+                 alt="Leopard scent marking" loading="lazy">
+            <div class="behaviour-card-body">
+              <h4>Communication</h4>
+              <p>Leopards communicate through rasping cough-like calls, scent deposits on trees, and scratch marks to advertise territory and reproductive status.</p>
+            </div>
+          </div>
+          <div class="behaviour-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Leopard_in_Masai_Mara.jpg/800px-Leopard_in_Masai_Mara.jpg"
+                 alt="Nocturnal leopard" loading="lazy">
+            <div class="behaviour-card-body">
+              <h4>Activity Patterns</h4>
+              <p>Primarily nocturnal and crepuscular, leopards rest in dense vegetation or trees during the heat of the day, making them exceptionally difficult to spot.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ══════════════════════ BUFFALO ══════════════════════ -->
+    <div id="panel-buffalo" class="animal-panel">
+
+      <div class="info-row">
+        <article class="info-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/African_Buffalo_%28Syncerus_caffer%29_%286789470888%29.jpg/1280px-African_Buffalo_%28Syncerus_caffer%29_%286789470888%29.jpg"
+               alt="African Buffalo grazing" loading="lazy">
+          <div class="info-card-body">
+            <div class="section-label">Diet</div>
+            <h3>BULK GRAZER</h3>
+            <p>Buffalo are non-selective bulk grazers consuming coarse, tall grasses that other ungulates avoid — a critical ecological role in managing savanna vegetation.</p>
+          </div>
+        </article>
+
+        <article class="info-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Serengeti-Ecosystem-Main.jpg/1280px-Serengeti-Ecosystem-Main.jpg"
+               alt="Buffalo grassland habitat" loading="lazy">
+          <div class="info-card-body">
+            <div class="section-label">Habitat</div>
+            <h3>FLOODPLAINS &amp; WOODLAND</h3>
+            <p>Buffalo depend on access to permanent water and nutritious grasses, inhabiting floodplains, riverine forest, and mixed bushveld across sub-Saharan Africa.</p>
+          </div>
+        </article>
+      </div>
+
+      <section class="behaviours-section">
+        <div class="behaviours-header">
+          <div class="section-label">Behaviours</div>
+          <h3>BEHAVIOURAL TRAITS</h3>
+        </div>
+        <div class="behaviours-grid">
+          <div class="behaviour-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/African_Buffalo_%28Syncerus_caffer%29_%286789470888%29.jpg/800px-African_Buffalo_%28Syncerus_caffer%29_%286789470888%29.jpg"
+                 alt="Buffalo herd" loading="lazy">
+            <div class="behaviour-card-body">
+              <h4>Social Behaviour</h4>
+              <p>Buffalo form massive herds of hundreds to thousands, displaying remarkable collective decision-making — the herd "votes" on direction of travel by standing and gazing.</p>
+            </div>
+          </div>
+          <div class="behaviour-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/African_Buffalo_%28Syncerus_caffer%29_%286789470888%29.jpg/800px-African_Buffalo_%28Syncerus_caffer%29_%286789470888%29.jpg"
+                 alt="Buffalo communication" loading="lazy">
+            <div class="behaviour-card-body">
+              <h4>Communication</h4>
+              <p>Buffalo communicate using a range of bellows, grunts, and body postures. Alarm calls trigger rapid defensive formations to protect calves from predators.</p>
+            </div>
+          </div>
+          <div class="behaviour-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/African_Buffalo_%28Syncerus_caffer%29_%286789470888%29.jpg/800px-African_Buffalo_%28Syncerus_caffer%29_%286789470888%29.jpg"
+                 alt="Buffalo wallowing" loading="lazy">
+            <div class="behaviour-card-body">
+              <h4>Activity Patterns</h4>
+              <p>Mainly crepuscular grazers, buffalo wallow in mud and water during the heat of the day — a behaviour that regulates body temperature and removes parasites.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ══════════════════════ RHINO ══════════════════════ -->
+    <div id="panel-rhino" class="animal-panel">
+
+      <div class="info-row">
+        <article class="info-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Rhinoceros_at_the_Zurich_Zoo.jpg/1280px-Rhinoceros_at_the_Zurich_Zoo.jpg"
+               alt="Black Rhinoceros browsing" loading="lazy">
+          <div class="info-card-body">
+            <div class="section-label">Diet</div>
+            <h3>BROWSER</h3>
+            <p>The black rhino is a selective browser, using its hooked prehensile upper lip to grasp leaves, shoots, and branches from thorny bushes and trees.</p>
+          </div>
+        </article>
+
+        <article class="info-card">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Rhinoceros_at_the_Zurich_Zoo.jpg/1280px-Rhinoceros_at_the_Zurich_Zoo.jpg"
+               alt="Rhino in scrubland habitat" loading="lazy">
+          <div class="info-card-body">
+            <div class="section-label">Habitat</div>
+            <h3>BUSHVELD &amp; THORNBUSH</h3>
+            <p>Black rhinos favour dense thornbush, semi-arid scrubland, and rocky hillsides. Botswana's dedicated sanctuaries provide secure habitats for reintroduced populations.</p>
+          </div>
+        </article>
+      </div>
+
+      <section class="behaviours-section">
+        <div class="behaviours-header">
+          <div class="section-label">Behaviours</div>
+          <h3>BEHAVIOURAL TRAITS</h3>
+        </div>
+        <div class="behaviours-grid">
+          <div class="behaviour-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Rhinoceros_at_the_Zurich_Zoo.jpg/800px-Rhinoceros_at_the_Zurich_Zoo.jpg"
+                 alt="Solitary rhino" loading="lazy">
+            <div class="behaviour-card-body">
+              <h4>Social Behaviour</h4>
+              <p>Black rhinos are largely solitary and territorial. Mothers and calves form the only lasting bond, with calves remaining dependent for two to three years.</p>
+            </div>
+          </div>
+          <div class="behaviour-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Rhinoceros_at_the_Zurich_Zoo.jpg/800px-Rhinoceros_at_the_Zurich_Zoo.jpg"
+                 alt="Rhino scent marking" loading="lazy">
+            <div class="behaviour-card-body">
+              <h4>Communication</h4>
+              <p>Rhinos rely heavily on scent — using dung middens and urine spraying to communicate territory, sex, and reproductive state to other individuals.</p>
+            </div>
+          </div>
+          <div class="behaviour-card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Rhinoceros_at_the_Zurich_Zoo.jpg/800px-Rhinoceros_at_the_Zurich_Zoo.jpg"
+                 alt="Rhino wallowing" loading="lazy">
+            <div class="behaviour-card-body">
+              <h4>Activity Patterns</h4>
+              <p>Rhinos are most active at night and during cooler morning and evening hours, spending midday wallowing in mud holes to stay cool and protect against insects.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <section id="contact-info">
+      <p>Contact us for safari inquiries in <strong>Gaborone, Botswana</strong>.</p>
+      <p>&copy; 2026 Botswana Big Five Educational Portal &nbsp;·&nbsp; Student Project: <strong>Bogolo Samoka</strong></p>
+    </section>
+    <nav id="social-links">
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+    </nav>
+  </footer>
+
+  <script>
+    function showAnimal(id, btn) {
+      // Hide all panels
+      document.querySelectorAll('.animal-panel').forEach(p => p.classList.remove('visible'));
+      // Deactivate all buttons
+      document.querySelectorAll('#animal-selector button').forEach(b => b.classList.remove('active'));
+      // Show selected panel
+      const panel = document.getElementById('panel-' + id);
+      if (panel) {
+        panel.classList.add('visible');
+        // Re-trigger animation
+        panel.style.animation = 'none';
+        panel.offsetHeight; // reflow
+        panel.style.animation = '';
+      }
+      // Activate button
+      btn.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
