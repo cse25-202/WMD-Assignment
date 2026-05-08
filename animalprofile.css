@@ -1,0 +1,371 @@
+:root {
+      --savanna:  #C8874A;
+      --earth:    #7A4E2D;
+      --dusk:     #2C1A0E;
+      --night:    #140D06;
+      --gold:     #c8a84b;
+      --pale:     #F5ECD7;
+      --muted:    #9C8060;
+      --accent:   #D4601A;
+      --header-bg:#1b2319;
+      --nav-idle: #96aa88;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--night);
+      color: var(--pale);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── HEADER ─────────────────────────────── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      height: 64px;
+    }
+
+    #brand-area {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    #brand-area .leaf-icon { font-size: 1.5rem; line-height: 1; }
+
+    #brand-area h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.55rem;
+      font-weight: 400;
+      color: var(--gold);
+      letter-spacing: 4px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 38px;
+      align-items: center;
+    }
+
+    nav a {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 2.5px;
+      color: var(--nav-idle);
+      text-decoration: none;
+      transition: color 0.25s;
+      position: relative;
+      padding-bottom: 3px;
+    }
+
+    nav a:hover { color: var(--gold); }
+
+    nav a.active { color: var(--gold); }
+
+    nav a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0; right: 0;
+      height: 2px;
+      background: var(--gold);
+      border-radius: 1px;
+    }
+
+    /* ── PAGE HERO ───────────────────────────── */
+    .page-hero {
+      position: relative;
+      text-align: center;
+      padding: 80px 5vw 60px;
+      background:
+        linear-gradient(to bottom, rgba(20,13,6,0.3) 0%, rgba(20,13,6,0.9) 100%),
+        radial-gradient(ellipse at 50% 30%, #2a3d1e 0%, #1a2318 50%, #140D06 100%);
+      overflow: hidden;
+    }
+
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 48px;
+      background: var(--night);
+      clip-path: polygon(0 100%, 0 55%, 2% 35%, 4% 55%, 6% 25%, 8% 48%, 10% 18%, 12% 42%, 14% 32%, 16% 52%, 18% 22%, 20% 46%, 22% 35%, 24% 58%, 26% 25%, 28% 45%, 30% 32%, 32% 52%, 34% 20%, 36% 47%, 38% 30%, 40% 53%, 42% 16%, 44% 42%, 46% 28%, 48% 50%, 50% 22%, 52% 47%, 54% 35%, 56% 58%, 58% 25%, 60% 45%, 62% 32%, 64% 52%, 66% 18%, 68% 42%, 70% 30%, 72% 52%, 74% 20%, 76% 47%, 78% 35%, 80% 58%, 82% 25%, 84% 45%, 86% 32%, 88% 52%, 90% 22%, 92% 47%, 94% 38%, 96% 52%, 98% 28%, 100% 48%, 100% 100%);
+    }
+
+    .hero-tag {
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 6px;
+      font-size: 0.75rem;
+      color: var(--savanna);
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .page-hero h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 6vw, 4.5rem);
+      font-weight: 900;
+      color: var(--pale);
+      line-height: 1.1;
+      margin-bottom: 14px;
+    }
+
+    .page-hero h2 em { font-style: italic; color: var(--gold); }
+
+    .hero-sub {
+      font-size: 1rem;
+      color: var(--muted);
+      font-weight: 300;
+      max-width: 460px;
+      margin: 0 auto;
+    }
+
+    /* ── ANIMAL SELECTOR ─────────────────────── */
+    #animal-selector {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding: 48px 5vw 36px;
+    }
+
+    #animal-selector button {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 0.82rem;
+      letter-spacing: 3px;
+      background: transparent;
+      color: var(--nav-idle);
+      border: 1px solid rgba(150, 170, 136, 0.35);
+      padding: 10px 28px;
+      cursor: pointer;
+      transition: all 0.25s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #animal-selector button::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(200, 168, 75, 0.08);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s;
+    }
+
+    #animal-selector button:hover::before,
+    #animal-selector button.active::before { transform: scaleX(1); }
+
+    #animal-selector button:hover,
+    #animal-selector button.active {
+      color: var(--gold);
+      border-color: var(--gold);
+    }
+
+    /* ── ANIMAL PANEL ────────────────────────── */
+    .animal-panel {
+      display: none;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 5vw 80px;
+      animation: fadeUp 0.45s ease both;
+    }
+
+    .animal-panel.visible { display: block; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── SECTION LABEL ───────────────────────── */
+    .section-label {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 5px;
+      color: var(--savanna);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(200,135,74,0.2);
+    }
+
+    /* ── DIET & HABITAT ROW ──────────────────── */
+    .info-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px;
+      margin-bottom: 2px;
+    }
+
+    .info-card {
+      position: relative;
+      overflow: hidden;
+      height: 340px;
+    }
+
+    .info-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: brightness(0.65) saturate(0.9);
+      transition: filter 0.5s, transform 0.6s;
+    }
+
+    .info-card:hover img {
+      filter: brightness(0.55) saturate(1.1);
+      transform: scale(1.04);
+    }
+
+    .info-card-body {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 28px 32px;
+      background: linear-gradient(to top, rgba(20,13,6,0.92) 0%, rgba(20,13,6,0.5) 60%, transparent 100%);
+    }
+
+    .info-card-body h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      letter-spacing: 4px;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .info-card-body p {
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: rgba(245,236,215,0.88);
+      line-height: 1.65;
+      max-width: 380px;
+    }
+
+    /* ── BEHAVIOURS GRID ─────────────────────── */
+    .behaviours-section {
+      margin-top: 2px;
+    }
+
+    .behaviours-header {
+      background: rgba(44,26,14,0.5);
+      border: 1px solid rgba(200,135,74,0.12);
+      padding: 28px 36px 22px;
+      border-bottom: none;
+    }
+
+    .behaviours-header h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.5rem;
+      letter-spacing: 4px;
+      color: var(--gold);
+    }
+
+    .behaviours-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+
+    .behaviour-card {
+      position: relative;
+      overflow: hidden;
+      height: 300px;
+    }
+
+    .behaviour-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: brightness(0.6) saturate(0.85);
+      transition: filter 0.4s, transform 0.5s;
+    }
+
+    .behaviour-card:hover img {
+      filter: brightness(0.5) saturate(1.1);
+      transform: scale(1.05);
+    }
+
+    .behaviour-card-body {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 22px 24px;
+      background: linear-gradient(to top, rgba(20,13,6,0.95) 0%, rgba(20,13,6,0.55) 60%, transparent 100%);
+    }
+
+    .behaviour-card-body h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.05rem;
+      letter-spacing: 3px;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+
+    .behaviour-card-body p {
+      font-size: 0.88rem;
+      font-weight: 300;
+      color: rgba(245,236,215,0.82);
+      line-height: 1.6;
+    }
+
+    /* ── FOOTER ──────────────────────────────── */
+    footer {
+      background: #1b2319;
+      border-top: 1px solid rgba(200,168,75,0.18);
+      padding: 44px 5vw 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-weight: 300;
+    }
+
+    footer p strong { color: var(--gold); font-weight: 600; }
+
+    #social-links { display: flex; gap: 24px; }
+
+    #social-links a {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    #social-links a:hover { color: var(--gold); }
+
+    /* ── RESPONSIVE ──────────────────────────── */
+    @media (max-width: 768px) {
+      header { padding: 0 20px; }
+      nav ul { gap: 16px; }
+      .info-row { grid-template-columns: 1fr; }
+      .behaviours-grid { grid-template-columns: 1fr; }
+      .info-card { height: 260px; }
+      .behaviour-card { height: 240px; }
+    }
