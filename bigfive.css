@@ -1,15 +1,25 @@
 
- :root {
-      --gold:        #C9A84C;
-      --gold-light:  #E8C97A;
-      --rust:        #9C4A1A;
-      --bark:        #3E2310;
-      --forest:      #1C2B18;
-      --dusk:        #0E1A0C;
-      --sand:        #F5EDD8;
-      --mist:        #D6C9A8;
-      --ivory:       #FAF7EF;
-      --white:       #FFFFFF;
+  :root {
+
+  --savanna: #C8874A;
+
+  --earth: #7A4E2D;
+
+  --dusk: #2C1A0E;
+
+  --night: #140D06;
+
+  --gold: #c8a84b;
+
+  --pale: #F5ECD7;
+
+  --muted: #9C8060;
+
+  --accent: #D4601A;
+
+  --header-bg: #1b2319;
+
+  --nav-idle: #96aa88;
 
       --font-display: 'Cormorant Garamond', Georgia, serif;
       --font-body:    'DM Sans', sans-serif;
