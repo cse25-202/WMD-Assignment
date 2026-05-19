@@ -2,19 +2,6 @@
    1. GLOBAL RESET
    ========================================================================== */
 
-:root {
-  --savanna: #C8874A;
-  --earth: #7A4E2D;
-  --dusk: #2C1A0E;
-  --night: #140D06;
-  --gold: #c8a84b;
-  --pale: #F5ECD7;
-  --muted: #9C8060;
-  --accent: #D4601A;
-  --header-bg: #1b2319;
-  --nav-idle: #96aa88;
-}
-
 *,
 *::before,
 *::after {
