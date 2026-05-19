@@ -14,8 +14,8 @@ html {
 }
 
 body {
-  background-color: var(--night);
-  color: var(--pale);
+  background-color: #140D06;
+  color: #F5ECD7;
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 18px;
   line-height: 1.7;
