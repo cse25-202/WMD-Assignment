@@ -1,75 +1,44 @@
-* ==========================================================================
-   1. GLOBAL RESET & BASE STYLES
+/* ==========================================================================
+   1. GLOBAL RESET
    ========================================================================== */
 
-:root {
-  --savanna:        #C8874A;
-  --earth:          #7A4E2D;
-  --dusk:           #2C1A0E;
-  --night:          #140D06;
-  --gold:           #c8a84b;
-  --gold-light:     #E8C97A;
-  --pale:           #F5ECD7;
-  --muted:          #9C8060;
-  --accent:         #D4601A;
-  --header-bg:      #1b2319;
-  --nav-idle:       #96aa88;
-
-  /* Restored exact Font Profiles from the original reference design */
-  --font-display:   'Playfair Display', serif;
-  --font-body:      'Cormorant Garamond', Georgia, serif;
-  --font-stamp:     'Bebas Neue', sans-serif;
-
-  --max-w:          1100px;
-  --radius:         0px; /* Reset to match hard structural corners of reference layout */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-*, *::before, *::after { 
-  box-sizing: border-box; 
-  margin: 0; 
-  padding: 0; 
-}
-
-html { 
-  scroll-behavior: smooth; 
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: var(--font-body);
-  background: var(--night);
-  color: var(--pale);
+  background-color: #140D06;
+  color: #F5ECD7;
+  font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 18px;
   line-height: 1.7;
   overflow-x: hidden;
 }
 
-/* Micro-grain tactical overlay from reference theme */
-body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.02'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 9999;
+/* Global Font Type Enforcements */
+#brand-area h1,
+nav a,
+.hero-eyebrow,
+.section-eyebrow,
+.form-group label,
+.submit-btn,
+#social-links a {
+  font-family: 'Bebas Neue', sans-serif;
 }
 
-img { 
-  display: block; 
-  max-width: 100%; 
-}
-
-a { 
-  color: var(--gold); 
-  text-decoration: none; 
-  transition: color 0.25s; 
-}
-
-a:hover { 
-  color: var(--gold-light); 
-}
-
-ul { 
-  list-style: none; 
+.page-hero h2,
+.section-title,
+.info-card h5,
+.faq-question {
+  font-family: 'Playfair Display', serif;
 }
 
 /* ==========================================================================
