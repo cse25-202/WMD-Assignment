@@ -396,42 +396,50 @@ nav a.active::after {
 
 footer {
   background: #1b2319;
-  border-top: 1px solid rgba(200, 168, 75, 0.18);
+  border-top: 1px solid rgba(200, 135, 74, 0.2);
   padding: 44px 5vw 32px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 18px;
-  text-align: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
-footer p {
+.footer-brand {
+  font-size: 1.3rem;
+  color: #c8a84b;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.footer-left p {
   font-size: 0.85rem;
   color: #9C8060;
-  font-weight: 300;
 }
 
-footer p strong {
-  color: #C8a84b;
-  font-weight: 600;
+.footer-right {
+  text-align: right;
 }
 
-#social-links {
-  display: flex;
-  gap: 24px;
+.footer-right p {
+  font-size: 0.8rem;
+  color: rgba(245, 236, 215, 0.4);
+  margin-bottom: 6px;
 }
 
 #social-links a {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 0.75rem;
-  letter-spacing: 2px;
   color: #9C8060;
   text-decoration: none;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-left: 16px;
   transition: color 0.3s;
 }
 
 #social-links a:hover {
-  color: #C8a84b;
+  color:  #c8a84b;
 }
 
 /* ==========================================================================
