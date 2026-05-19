@@ -647,8 +647,8 @@ nav a.active::after {
    ========================================================================== */
 
 footer {
-  background: #0e0902;
-  border-top: 1px solid rgba(200, 135, 74, 0.18);
+  background: #1b2319;
+  border-top: 1px solid rgba(200, 135, 74, 0.2);
   padding: 44px 5vw 32px;
   display: flex;
   align-items: center;
@@ -665,7 +665,7 @@ footer {
   margin-bottom: 6px;
 }
 
-#contact-info p {
+.footer-left p {
   font-size: 0.85rem;
   color: #9C8060;
 }
@@ -691,8 +691,9 @@ footer {
 }
 
 #social-links a:hover {
-  color: #c8a84b;
+  color:  #c8a84b;
 }
+
 
 /* ==========================================================================
    13. RESPONSIVE
