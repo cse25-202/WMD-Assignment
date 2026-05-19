@@ -1,3 +1,116 @@
+/* ==========================================================================
+   1. GLOBAL RESET
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #140D06;
+  color: #F5ECD7;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 18px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* Global Font Type Enforcements */
+#brand-area h1,
+nav a,
+.hero-eyebrow,
+.section-eyebrow,
+.form-group label,
+.submit-btn,
+#social-links a {
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.page-hero h2,
+.section-title,
+.info-card h5,
+.faq-question {
+  font-family: 'Playfair Display', serif;
+}
+
+/* ==========================================================================
+   2. HEADER & NAVIGATION
+   ========================================================================== */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: #1b2319;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  height: 64px;
+}
+
+#brand-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+#brand-area span {
+  color:  #c8a84b;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+#brand-area h1 {
+  font-size: 1.55rem;
+  font-weight: 400;
+  color:  #c8a84b;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 38px;
+  align-items: center;
+}
+
+nav a {
+  font-size: 0.78rem;
+  letter-spacing: 2.5px;
+  color:  #96aa88;
+  text-decoration: none;
+  transition: color 0.25s;
+  position: relative;
+  padding: 4px 0;
+  text-transform: uppercase;
+}
+
+nav a:hover,
+nav a.active {
+  color:  #c8a84b;
+}
+
+nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #c8a84b;
+  border-radius: 1px;
+}
 
 
 /* ==========================================================================
