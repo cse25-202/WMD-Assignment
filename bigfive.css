@@ -1,15 +1,15 @@
-:root {
-  --savanna: #C8874A;
-  --earth: #7A4E2D;
-  --dusk: #2C1A0E;
-  --night: #140D06;
-  --gold: #c8a84b;
-  --pale: #F5ECD7;
-  --muted: #9C8060;
-  --accent: #D4601A;
-  --header-bg: #1b2319;
-  --nav-idle: #96aa88;
-}
+    :root {
+      --savanna:     #C8874A;
+      --earth:       #7A4E2D;
+      --dusk:        #2C1A0E;
+      --night:       #140D06;
+      --gold:        #E8B86D;
+      --pale:        #F5ECD7;
+      --grass:       #8B7355;
+      --accent:      #D4601A;
+      --muted:       #9C8060;
+    }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     html { scroll-behavior: smooth; }
@@ -370,3 +370,5 @@
     .animal-card:nth-child(4) { animation-delay: 0.4s; }
     .animal-card:nth-child(5) { animation-delay: 0.5s; }
   
+      
+   
