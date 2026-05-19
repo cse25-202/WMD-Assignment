@@ -1,5 +1,5 @@
 /* ==========================================================================
-   1. GLOBAL RESET & TYPOGRAPHY
+   1. GLOBAL RESET
    ========================================================================== */
 
 *,
@@ -23,27 +23,29 @@ body {
   overflow-x: hidden;
 }
 
-/* Global Font Type Enforcements (Unified for both pages) */
+/* Global Font Type Enforcements */
 #brand-area h1,
 nav a,
 .hero-eyebrow,
+.hero-tag,
 .section-eyebrow,
-.section-label,
-#animal-selector button,
-.behaviour-card-body h4,
+.animal-eyebrow,
+.form-group label,
+.submit-btn,
 #social-links a {
   font-family: 'Bebas Neue', sans-serif;
 }
 
 .page-hero h2,
 .section-title,
-.info-card-body h3,
-.behaviours-header h3 {
+.info-card h5,
+.faq-question,
+.animal-card h2 {
   font-family: 'Playfair Display', serif;
 }
 
 /* ==========================================================================
-   2. HEADER & NAVIGATION (Exact match to Contact page)
+   2. HEADER & NAVIGATION
    ========================================================================== */
 
 header {
@@ -114,16 +116,15 @@ nav a.active::after {
 }
 
 /* ==========================================================================
-   3. PAGE HERO (Matched to Contact page styling)
+   3. PAGE HERO
    ========================================================================== */
 
 .page-hero {
   position: relative;
   text-align: center;
-  padding: 120px 5vw 80px;
-  background:
-    linear-gradient(to bottom, rgba(20, 13, 6, 0.4) 0%, rgba(20, 13, 6, 0.85) 100%),
-    radial-gradient(ellipse at 60% 40%, #7A4E2D 0%, #2C1A0E 60%, #140D06 100%);
+  padding: 100px 5vw 72px;
+  background: linear-gradient(to bottom, #140D06 0%, #1a0f05 100%);
+  border-bottom: 1px solid rgba(200, 168, 75, 0.12);
   overflow: hidden;
 }
 
@@ -132,15 +133,15 @@ nav a.active::after {
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(circle at 20% 80%, rgba(200, 135, 74, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(212, 96, 26, 0.06) 0%, transparent 50%);
+    radial-gradient(circle at 20% 80%, rgba(200, 135, 74, 0.06) 0%, transparent 55%),
+    radial-gradient(circle at 80% 20%, rgba(212, 96, 26, 0.05) 0%, transparent 55%);
   pointer-events: none;
 }
 
 .hero-tag,
 .hero-eyebrow {
   letter-spacing: 6px;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: #C8874A;
   margin-bottom: 16px;
   display: block;
@@ -160,6 +161,7 @@ nav a.active::after {
   color: #c8a84b;
 }
 
+.page-hero p,
 .hero-sub {
   font-size: 1.05rem;
   color: #9C8060;
@@ -169,207 +171,488 @@ nav a.active::after {
 }
 
 /* ==========================================================================
-   4. ANIMAL SELECTOR INTERFACE (Styled like Contact forms/buttons)
+   4. ANIMALS GRID — MAIN LAYOUT
    ========================================================================== */
 
-#animal-selector {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
-  padding: 48px 5vw 36px;
+.animals-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 5vw 60px;
 }
 
-#animal-selector button {
+/* ==========================================================================
+   5. ANIMAL CARD — MAGAZINE LAYOUT
+   ========================================================================== */
+
+.animal-card {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 36px;
+  padding: 40px 0;
+  border-bottom: 1px solid rgba(200, 135, 74, 0.12);
+  align-items: start;
+  animation: fadeUp 0.5s ease both;
+}
+
+.animal-card:last-child {
+  border-bottom: none;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Photo side */
+.animal-id {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.photo-wrap img,
+.animal-photo {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.5s ease;
+}
+
+.animal-card:hover .photo-wrap img,
+.animal-card:hover .animal-photo {
+  transform: scale(1.04);
+}
+
+/* Number tag overlaid on photo */
+.animal-number {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(20, 13, 6, 0.82);
+  color: #c8a84b;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1rem !important;
+  letter-spacing: 3px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  line-height: 1.4;
+  z-index: 2;
+}
+
+/* Caption bar below photo */
+.animal-id > div:last-child {
+  background: rgba(27, 35, 25, 0.6) !important;
+  padding: 14px 18px 12px !important;
+  text-align: left !important;
+  border-radius: 0 0 8px 8px;
+  border-top: 1px solid rgba(200, 135, 74, 0.15);
+}
+
+.animal-id h2 {
+  font-size: 1.15rem !important;
+  font-weight: 700;
+  color: #F5ECD7;
+  margin-bottom: 2px;
+  font-family: 'Playfair Display', serif;
+}
+
+.scientific {
+  font-size: 0.8rem !important;
+  color: #9C8060 !important;
+  font-style: italic;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Content side */
+.animal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 4px;
+}
+
+.animal-content section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.animal-content h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 3px;
+  color: #C8874A;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.animal-content p {
+  font-size: 0.95rem;
+  color: rgba(245, 236, 215, 0.8);
+  line-height: 1.75;
+  font-weight: 300;
+}
+
+/* ==========================================================================
+   6. CONSERVATION STATUS BADGES
+   ========================================================================== */
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 400;
+  width: fit-content;
+}
+
+/* Vulnerable — amber */
+.status-badge:not([class*="Near"]):not([class*="Critically"]) {
+  background: rgba(200, 135, 74, 0.15);
+  color: #C8874A;
+  border: 1px solid rgba(200, 135, 74, 0.3);
+}
+
+/* Targeted by text content for Near Threatened */
+#buffalo-conservation .status-badge {
+  background: rgba(150, 170, 136, 0.12);
+  color: #96aa88;
+  border: 1px solid rgba(150, 170, 136, 0.28);
+}
+
+/* Targeted by text content for Critically Endangered */
+#rhino-conservation .status-badge {
+  background: rgba(200, 70, 60, 0.15);
+  color: #e05a50;
+  border: 1px solid rgba(200, 70, 60, 0.3);
+}
+
+/* ==========================================================================
+   7. SAVANNA DIVIDER
+   ========================================================================== */
+
+.savanna-divider {
+  text-align: center;
+  color: rgba(200, 168, 75, 0.25);
+  font-size: 0.85rem;
+  letter-spacing: 8px;
+  padding: 6px 0;
+  display: none; /* hidden — card border-bottom handles separation */
+}
+
+/* ==========================================================================
+   8. LAYOUT STRUCTURAL WRAPPERS
+   ========================================================================== */
+
+.section-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 5vw;
+}
+
+.section-eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 4px;
+  color: #C8874A;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: #F5ECD7;
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  color: #9C8060;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 48px;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid rgba(200, 135, 74, 0.15);
+  margin: 0;
+}
+
+/* ==========================================================================
+   9. CONTACT FORM + INFO ROW
+   ========================================================================== */
+
+#contact-form-section {
+  padding: 80px 0;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 48px;
+  align-items: start;
+}
+
+.form-card {
+  background: rgba(44, 26, 14, 0.45);
+  border: 1px solid rgba(200, 135, 74, 0.18);
+  padding: 40px;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: #C8874A;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px 16px;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1rem;
+  color: #F5ECD7;
+  background: rgba(20, 13, 6, 0.5);
+  border: 1px solid rgba(200, 135, 74, 0.2);
+  border-radius: 0;
+  transition: all 0.25s;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #c8a84b;
+  background: rgba(44, 26, 14, 0.8);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 14px 32px;
+  background: #1b2319;
+  color: #c8a84b;
+  border: 1px solid rgba(200, 168, 75, 0.3);
   font-size: 0.85rem;
   letter-spacing: 2.5px;
   text-transform: uppercase;
-  background: #1b2319;
-  color: #96aa88;
-  border: 1px solid rgba(200, 168, 75, 0.3);
-  padding: 12px 32px;
   cursor: pointer;
   transition: all 0.25s;
+  margin-top: 8px;
 }
 
-#animal-selector button:hover,
-#animal-selector button.active {
+.submit-btn:hover {
   background: #7A4E2D;
   color: #F5ECD7;
   border-color: #7A4E2D;
 }
 
-/* ==========================================================================
-   5. ANIMAL CONTENT PANELS
-   ========================================================================== */
-
-.animal-panel {
-  display: none;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 5vw 80px;
-  animation: fadeUp 0.45s ease both;
-}
-
-.animal-panel.visible {
-  display: block;
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(22px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.section-label {
-  font-size: 0.75rem;
-  letter-spacing: 4px;
-  color: #C8874A;
+.contact-info-panel {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 24px;
-  text-transform: uppercase;
-}
-
-.section-label::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  border-top: 1px solid rgba(200, 135, 74, 0.15);
-}
-
-/* ==========================================================================
-   6. INFO CARDS (DIET & HABITAT)
-   ========================================================================== */
-
-.info-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-  margin-bottom: 24px;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .info-card {
-  position: relative;
-  overflow: hidden;
-  height: 380px;
-  background: rgba(44, 26, 14, 0.45);
-  border: 1px solid rgba(200, 135, 74, 0.18);
+  background: rgba(44, 26, 14, 0.25);
+  border: 1px solid rgba(200, 135, 74, 0.15);
+  padding: 20px 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  border-left: 3px solid #C8874A;
 }
 
-.info-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  filter: sepia(30%) hue-rotate(340deg) brightness(0.6) contrast(1.1);
-  transition: filter 0.5s, transform 0.6s;
+.info-icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  color: #c8a84b;
 }
 
-.info-card:hover img {
-  filter: sepia(20%) hue-rotate(340deg) brightness(0.7) contrast(1.1);
-  transform: scale(1.04);
-}
-
-.info-card-body {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 32px;
-  background: linear-gradient(to top, rgba(20, 13, 6, 0.95) 0%, rgba(20, 13, 6, 0.6) 60%, transparent 100%);
-}
-
-.info-card-body h3 {
-  font-size: 1.8rem;
+.info-card h5 {
+  font-size: 1.1rem;
   color: #F5ECD7;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
-.info-card-body p {
+.info-card p {
+  font-size: 0.95rem;
   color: #9C8060;
   font-weight: 300;
-  max-width: 380px;
+}
+
+.form-success {
+  display: none;
+  background: rgba(27, 35, 25, 0.6);
+  border: 1px solid rgba(150, 170, 136, 0.4);
+  padding: 16px;
+  color: #96aa88;
+  font-size: 0.95rem;
+  margin-top: 16px;
+  text-align: center;
 }
 
 /* ==========================================================================
-   7. BEHAVIOURS LAYOUT
+   10. MAPS
    ========================================================================== */
 
-.behaviours-section {
-  margin-top: 24px;
+#map-section {
+  background: #2C1A0E;
+  border-top: 1px solid rgba(200, 135, 74, 0.2);
+  border-bottom: 1px solid rgba(200, 135, 74, 0.2);
+  padding: 80px 0;
 }
 
-.behaviours-header {
-  background: rgba(44, 26, 14, 0.45);
+#map-section .section-title { color: #F5ECD7; }
+#map-section .section-subtitle { color: #9C8060; }
+
+.map-wrapper {
+  overflow: hidden;
   border: 1px solid rgba(200, 135, 74, 0.18);
-  padding: 32px 36px 24px;
-  border-bottom: none;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
 }
 
-.behaviours-header h3 {
-  font-size: 2rem;
+.map-wrapper iframe {
+  display: block;
+  width: 100%;
+  height: 420px;
+  border: none;
+  filter: sepia(30%) hue-rotate(340deg) brightness(0.8) contrast(1.1);
+}
+
+.map-legend {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.map-legend span {
+  font-size: 0.9rem;
+  color: #9C8060;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.map-legend span::before {
+  content: '📍';
+  font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   11. FAQ ACCORDION
+   ========================================================================== */
+
+#faq {
+  padding: 80px 0;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.faq-item {
+  border-bottom: 1px solid rgba(200, 135, 74, 0.15);
+}
+
+.faq-item:first-child {
+  border-top: 1px solid rgba(200, 135, 74, 0.15);
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 24px 0;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #F5ECD7;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  transition: color 0.25s;
+}
+
+.faq-question:hover,
+.faq-question.open {
+  color: #c8a84b;
+}
+
+.faq-chevron {
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(200, 135, 74, 0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  color: #c8a84b;
+  flex-shrink: 0;
+  transition: all 0.25s;
+}
+
+.faq-question.open .faq-chevron {
+  transform: rotate(180deg);
+  background: #7A4E2D;
+  border-color: #7A4E2D;
   color: #F5ECD7;
 }
 
-.behaviours-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
-.behaviour-card {
-  position: relative;
-  overflow: hidden;
-  height: 320px;
-  background: rgba(44, 26, 14, 0.45);
-  border: 1px solid rgba(200, 135, 74, 0.18);
-}
-
-.behaviour-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  filter: sepia(30%) hue-rotate(340deg) brightness(0.6) contrast(1.1);
-  transition: filter 0.4s, transform 0.5s;
-}
-
-.behaviour-card:hover img {
-  filter: sepia(20%) hue-rotate(340deg) brightness(0.7) contrast(1.1);
-  transform: scale(1.05);
-}
-
-.behaviour-card-body {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 24px;
-  background: linear-gradient(to top, rgba(20, 13, 6, 0.95) 0%, rgba(20, 13, 6, 0.6) 60%, transparent 100%);
-}
-
-.behaviour-card-body h4 {
-  font-size: 1.1rem;
-  letter-spacing: 2px;
-  color: #c8a84b;
-  margin-bottom: 8px;
-  text-transform: uppercase;
-}
-
-.behaviour-card-body p {
-  font-size: 0.95rem;
+.faq-answer {
+  display: none;
+  padding: 0 0 24px;
+  font-size: 1rem;
+  color: rgba(245, 236, 215, 0.8);
   font-weight: 300;
-  color: rgba(245, 236, 215, 0.85);
+  max-width: 800px;
+  line-height: 1.8;
+}
+
+.faq-answer.open {
+  display: block;
 }
 
 /* ==========================================================================
-   8. FOOTER (Exact match to Contact page)
+   12. FOOTER
    ========================================================================== */
 
 footer {
-  background: #140D06;
-  border-top: 1px solid rgba(200, 135, 74, 0.2);
+  background: #0e0902;
+  border-top: 1px solid rgba(200, 135, 74, 0.18);
   padding: 44px 5vw 32px;
   display: flex;
   align-items: center;
@@ -379,7 +662,6 @@ footer {
 }
 
 .footer-brand {
-  font-family: 'Bebas Neue', sans-serif;
   font-size: 1.3rem;
   color: #c8a84b;
   letter-spacing: 3px;
@@ -417,25 +699,49 @@ footer {
 }
 
 /* ==========================================================================
-   9. MEDIA QUERIES (RESPONSIVE)
+   13. RESPONSIVE
    ========================================================================== */
 
 @media (max-width: 860px) {
-  .info-row {
+  .animal-card {
     grid-template-columns: 1fr;
+    gap: 0;
   }
-  
-  .behaviours-grid {
-    grid-template-columns: 1fr 1fr;
+
+  .photo-wrap img,
+  .animal-photo {
+    height: 240px;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .animal-id > div:last-child {
+    border-radius: 0 !important;
+  }
+
+  .animal-content {
+    padding-top: 20px;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .contact-info-panel {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .info-card {
+    flex: 1 1 220px;
   }
 }
 
 @media (max-width: 640px) {
   header {
-    padding: 0 20px;
+    padding: 16px 20px;
     flex-direction: column;
     height: auto;
-    padding: 16px 20px;
     gap: 12px;
   }
 
@@ -445,7 +751,15 @@ footer {
     justify-content: center;
   }
 
-  .behaviours-grid {
+  .animals-grid {
+    padding: 0 20px 40px;
+  }
+
+  .section-wrap {
+    padding: 0 20px;
+  }
+
+  .form-row {
     grid-template-columns: 1fr;
   }
 
