@@ -124,29 +124,29 @@ nav a.active::after {
   background-position: center;
 }
 
-.hero-content h2 { font-family: var(--font-display); font-size: 3.5rem; color: var(--pale); margin-bottom: 1rem; }
+.hero-content h2 { font-family:  'Playfair Display', serif; font-size: 3.5rem; color: #F5ECD7;  margin-bottom: 1rem; }
 .hero-content p { max-width: 600px; margin: 0 auto 2rem; font-size: 1.2rem; }
 .hero-btn { 
   display: inline-block;
   padding: 1rem 2rem; 
-  background: var(--gold); 
-  color: var(--night); 
-  font-family: var(--font-stamp);
+  background: #c8a84b; 
+  color: #140D06; 
+  font-family: 'Bebas Neue', 'Jost', sans-serif;
   letter-spacing: 1px;
 }
 
 /* ==========================================================================
    MISSION SECTION
    ========================================================================== */
-#mission { padding: 80px 0; background: var(--dusk); }
+#mission { padding: 80px 0; background:  #2C1A0E; }
 .section-label { 
   display: block; 
-  font-family: var(--font-stamp); 
-  color: var(--savanna); 
+  font-family:'Bebas Neue', 'Jost', sans-serif;
+  color: #C8874A; 
   letter-spacing: 3px; 
   margin-bottom: 10px;
 }
-.section-title { font-family: var(--font-display); font-size: 2.5rem; margin-bottom: 20px; }
+.section-title { 'Playfair Display', serif;font-size: 2.5rem; margin-bottom: 20px; }
 
 .mission-grid {
   display: grid;
@@ -157,11 +157,11 @@ nav a.active::after {
 
 .mission-card {
   padding: 2rem;
-  border: 1px solid var(--earth);
+  border: 1px solid #7A4E2D; 
   background: rgba(122, 78, 45, 0.1);
 }
 
-.mission-card h3 { font-family: var(--font-stamp); color: var(--gold); margin-bottom: 10px; }
+.mission-card h3 { font-family: 'Bebas Neue', 'Jost', sans-serif; color: #c8a84b; margin-bottom: 10px; }
 
 /* ==========================================================================
    BIG FIVE GALLERY
@@ -178,7 +178,7 @@ nav a.active::after {
   position: relative;
   height: 400px;
   overflow: hidden;
-  border: 1px solid var(--earth);
+  border: 1px solid #7A4E2D; 
 }
 
 .animal-card__photo {
@@ -193,16 +193,16 @@ nav a.active::after {
 .animal-card__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, var(--night), transparent);
+  background: linear-gradient(to top, #140D06; , transparent);
 }
 
 .animal-card__num {
   position: absolute;
   top: 20px;
   left: 20px;
-  font-family: var(--font-stamp);
+  font-family: 'Bebas Neue', 'Jost', sans-serif;
   font-size: 2rem;
-  color: var(--gold);
+  color: #c8a84b;
 }
 
 .animal-card__info {
@@ -212,18 +212,18 @@ nav a.active::after {
 }
 
 .animal-card__name {
-  font-family: var(--font-display);
+  font-family: ''Playfair Display', serif;
   font-size: 1.5rem;
-  color: var(--pale);
+  color: #F5ECD7; 
 }
 
 .big-five__cta { text-align: center; margin-top: 40px; }
 .btn--primary { 
-  background: var(--earth); 
-  color: var(--pale); 
+  background: #7A4E2D; 
+  color: #F5ECD7; 
   padding: 1rem 2rem; 
   display: inline-block;
-  font-family: var(--font-stamp);
+  font-family: 'Bebas Neue', 'Jost', sans-serif;
 }
 
 /* ==========================================================================
@@ -277,11 +277,11 @@ footer {
   color:  #c8a84b;
 }
 
-.footer__brand { font-family: var(--font-stamp); color: var(--gold); font-size: 1.5rem; }
-.footer__tagline { font-size: 0.9rem; color: var(--muted); }
+.footer__brand { font-family: 'Bebas Neue', 'Jost', sans-serif; color: #c8a84b; font-size: 1.5rem; }
+.footer__tagline { font-size: 0.9rem; color: #9C8060; }
 .footer__social { display: flex; gap: 15px; margin-bottom: 10px; }
-.footer__social a { font-family: var(--font-stamp); font-size: 0.8rem; color: var(--muted); }
-.footer__copy { font-size: 0.8rem; color: var(--muted); }
+.footer__social a { font-family: 'Bebas Neue', 'Jost', sans-serif; font-size: 0.8rem; color: #9C8060; }
+.footer__copy { font-size: 0.8rem; color: #9C8060; }
 
 
 
