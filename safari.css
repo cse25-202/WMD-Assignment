@@ -126,7 +126,7 @@ nav a.active::after {
     radial-gradient(ellipse at 60% 40%, #7A4E2D; 0%,  #2C1A0E; 60%, #1b2319;100__);
   background-image:
     linear-gradient(to bottom, rgba(20, 13, 6, 0.55) 0%, rgba(20, 13, 6, 0.88) 100%),
-    url('https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1600&auto=format&fit=crop');
+    url('https://safarifrank.com/wp-content/uploads/2021/05/botswana-okavango-delta-khwai-leadwood-luxury-camp-22-1920x1080.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -210,7 +210,7 @@ nav a.active::after {
 section:has(.season-grid) {
   background-image:
     linear-gradient(to bottom, rgba(20, 13, 6, 0.82) 0%, rgba(20, 13, 6, 0.78) 100%),
-    url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1600&auto=format&fit=crop');
+    url('https://safarifrank.com/wp-content/uploads/2024/10/Khwai-Lediba-Botswana-Okavango-Delta-luxury-accomodation-private12.jpg');
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -357,7 +357,7 @@ section:has(.season-grid) {
 .dark-section:has(.budget-grid) {
   background-image:
     linear-gradient(to bottom, rgba(20, 13, 6, 0.80) 0%, rgba(20, 13, 6, 0.75) 100%),
-    url('https://images.unsplash.com/photo-1602862895849-be4e8ff84f78?w=1600&auto=format&fit=crop');
+    url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4DISTQQ-c-V_ZRzdllWchjhm7JXcUFGHgbw&s');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -445,7 +445,7 @@ section:has(.season-grid) {
 section:has(.tabs) {
   background-image:
     linear-gradient(to bottom, rgba(20, 13, 6, 0.84) 0%, rgba(20, 13, 6, 0.80) 100%),
-    url('https://images.unsplash.com/photo-1509059852496-f3822ae057bf?w=1600&auto=format&fit=crop');
+    url('https://safarifrank.com/wp-content/uploads/2019/04/khwai-tented-camp-botswana-leopard-1920x1080.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -519,7 +519,7 @@ section:has(.tabs) {
 .dark-section:has(.health-grid) {
   background-image:
     linear-gradient(to bottom, rgba(20, 13, 6, 0.82) 0%, rgba(20, 13, 6, 0.78) 100%),
-    url('https://images.unsplash.com/photo-1631563019676-dade0dbdb8fc?w=1600&auto=format&fit=crop');
+    url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy2pUnkpmDzU3d-2w3nM-pP9oQq-jJ_lyWDw&sp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -529,7 +529,7 @@ section:has(.tabs) {
 section:has(.safety-grid) {
   background-image:
     linear-gradient(to bottom, rgba(20, 13, 6, 0.83) 0%, rgba(20, 13, 6, 0.79) 100%),
-    url('https://images.unsplash.com/photo-1612178537253-bccd437b730e?w=1600&auto=format&fit=crop');
+    url('https://safarifrank.com/wp-content/uploads/2018/10/Savute-Lodge-Botswana-Safarifrank16.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
