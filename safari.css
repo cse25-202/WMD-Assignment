@@ -137,7 +137,7 @@ page-hero::before {
   pointer-events: none;
 }
 
-hero-eyebrow {
+.hero-eyebrow {
   letter-spacing: 6px;
   font-size: 0.8rem;
   color: #C8874A;
@@ -145,7 +145,7 @@ hero-eyebrow {
   display: block;
 }
 
-page-hero h1 {
+.page-hero h1 {
   font-size: clamp(3rem, 8vw, 6.5rem);
   font-weight: 900;
   line-height: 1;
@@ -153,7 +153,7 @@ page-hero h1 {
   margin-bottom: 20px;
 }
 
-page-hero p {
+.page-hero p {
   font-size: 1.05rem;
   color: #9C8060;
   max-width: 520px;
@@ -165,31 +165,31 @@ page-hero p {
    4. LAYOUT STRUCTURAL WRAPPERS
    ========================================================================== */
 
-section-wrap {
+.section-wrap {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 5vw;
 }
 
-section {
+.section {
   padding: 80px 0;
 }
 
-section-eyebrow {
+.section-eyebrow {
   font-size: 0.75rem;
   letter-spacing: 4px;
   color: #C8874A;
   margin-bottom: 10px;
 }
 
-section-title {
+.section-title {
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 700;
   color:  #F5ECD7;
   margin-bottom: 12px;
 }
 
-section-subtitle {
+.section-subtitle {
   color: #9C8060;
   font-size: 1rem;
   font-weight: 300;
@@ -200,41 +200,41 @@ section-subtitle {
    5. SEASONAL DETAILS GRID
    ========================================================================== */
 
-season-grid {
+.season-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
   margin-bottom: 24px;
 }
 
-season-card {
+.season-card {
   border: 1px solid rgba(200, 135, 74, 0.18);
   background: rgba(44, 26, 14, 0.45);
   overflow: hidden;
   transition: border-color 0.4s;
 }
 
-season-card:hover {
+.season-card:hover {
   border-color: rgba(200, 135, 74, 0.5);
 }
 
-season-card .sc-head {
+.season-card .sc-head {
   padding: 20px 24px;
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-season-card.dry .sc-head { background: rgba(27, 35, 25, 0.8); }
-season-card.wet .sc-head { background: rgba(44, 26, 14, 0.8); }
+.season-card.dry .sc-head { background: rgba(27, 35, 25, 0.8); }
+.season-card.wet .sc-head { background: rgba(44, 26, 14, 0.8); }
 
-season-card .sc-head h4 {
+.season-card .sc-head h4 {
   font-size: 1.3rem;
   color:  #F5ECD7;
   font-weight: 700;
 }
 
-season-card .sc-head .tag {
+.season-card .sc-head .tag {
   margin-left: auto;
   font-size: 0.72rem;
   letter-spacing: 2px;
@@ -243,17 +243,17 @@ season-card .sc-head .tag {
   padding: 4px 12px;
 }
 
-sc-body {
+.sc-body {
   padding: 24px;
 }
-sc-body dl {
+.sc-body dl {
   display: grid;
   grid-template-columns: 110px 1fr;
   row-gap: 16px;
   column-gap: 12px;
 }
 
-sc-body dt {
+.sc-body dt {
   font-size: 0.75rem;
   letter-spacing: 2px;
   color: #C8874A;
@@ -261,7 +261,7 @@ sc-body dt {
   padding-top: 2px;
 }
 
-sc-body dd {
+.sc-body dd {
   font-size: 0.95rem;
   color: rgba(245, 236, 215, 0.85);
   border-bottom: 1px solid rgba(200, 135, 74, 0.15);
@@ -272,13 +272,13 @@ sc-body dd {
    6. ANNUAL TIMELINE GRAPH (MONTH BAR)
    ========================================================================== */
 
-month-bar {
+.month-bar {
   background: rgba(44, 26, 14, 0.3);
   border: 1px solid rgba(200, 135, 74, 0.15);
   padding: 24px;
 }
 
-month-bar h5 {
+.month-bar h5 {
   font-size: 1.2rem;
   color: #c8a84b;
   margin-bottom: 16px;
@@ -290,18 +290,18 @@ month-bar h5 {
   gap: 4px;
 }
 
-mc {
+.mc {
   text-align: center;
   font-size: 0.72rem;
   letter-spacing: 1px;
   padding: 10px 2px;
 }
 
-mc.dry   { background: #1b2319; color: #c8a84b; }
-mc.wet   { background: #7A4E2D; color:  #F5ECD7; }
-mc.trans { background: rgba(200, 135, 74, 0.25); color:  #F5ECD7; }
+.mc.dry   { background: #1b2319; color: #c8a84b; }
+.mc.wet   { background: #7A4E2D; color:  #F5ECD7; }
+.mc.trans { background: rgba(200, 135, 74, 0.25); color:  #F5ECD7; }
 
-month-legend {
+.month-legend {
   display: flex;
   gap: 24px;
   margin-top: 16px;
@@ -309,101 +309,101 @@ month-legend {
   color: #9C8060;
 }
 
-month-legend span {
+.month-legend span {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-dot {
+.dot {
   width: 10px;
   height: 10px;
   border-radius: 50%;
   display: inline-block;
 }
 
-dot[style*="var(--green-dark)"]  { background-color: #1b2319;!important; }
-dot[style*="var(--green-light)"] { background-color:#7A4E2D; !important; }
-dot[style*="rgba(201,164,98,0.25)"] { background-color: rgba(200, 135, 74, 0.25) !important; }
+.dot[style*="var(--green-dark)"]  { background-color: #1b2319;!important; }
+.dot[style*="var(--green-light)"] { background-color:#7A4E2D; !important; }
+.dot[style*="rgba(201,164,98,0.25)"] { background-color: rgba(200, 135, 74, 0.25) !important; }
 
 /* ==========================================================================
    7. ADVENTURE BUDGET PLANS
    ========================================================================== */
 
-dark-section {
+.dark-section {
   background: var(--dusk);
   border-top: 1px solid rgba(200, 135, 74, 0.2);
   border-bottom: 1px solid rgba(200, 135, 74, 0.2);
   padding: 80px 0;
 }
 
-dark-section .section-title { color:  #F5ECD7; }
-dark-section .section-subtitle { color: #9C8060; }
+.dark-section .section-title { color:  #F5ECD7; }
+.dark-section .section-subtitle { color: #9C8060; }
 
-budget-grid {
+.budget-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
-budget-card {
+.budget-card {
   overflow: hidden;
   border: 1px solid rgba(200, 135, 74, 0.18);
   background: rgba(20, 13, 6, 0.3);
 }
 
-bh {
+.bh {
   padding: 18px 20px;
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-bh-icon {
+.bh-icon {
   font-size: 1.4rem;
 }
 
-bh-label {
+.bh-label {
   font-size: 1.2rem;
   color:  #F5ECD7;
 }
 
-budget-card.b1 .bh { background: rgba(150, 170, 136, 0.15); }
-budget-card.b2 .bh { background: rgba(200, 168, 75, 0.1); border-bottom: 1px solid rgba(200, 168, 75, 0.2); }
-budget-card.b2 .bh .bh-label { color:  #c8a84b; }
-budget-card.b3 .bh { background: rgba(212, 96, 26, 0.1); }
+.budget-card.b1 .bh { background: rgba(150, 170, 136, 0.15); }
+.budget-card.b2 .bh { background: rgba(200, 168, 75, 0.1); border-bottom: 1px solid rgba(200, 168, 75, 0.2); }
+.budget-card.b2 .bh .bh-label { color:  #c8a84b; }
+.budget-card.b3 .bh { background: rgba(212, 96, 26, 0.1); }
 
-bb {
+.bb {
   padding: 20px;
 }
 
-price {
+.price {
   font-size: 1.8rem;
   color: #c8a84b;
   margin-bottom: 12px;
 }
 
-price span {
+.price span {
   font-family: 'Cormorant Garamond', serif;
   font-size: 0.88rem;
   color:#9C8060;
 }
 
-bb ul {
+.bb ul {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-bb li {
+.bb li {
   font-size: 0.95rem;
   color: rgba(245, 236, 215, 0.8);
   padding-left: 20px;
   position: relative;
 }
 
-bb li::before {
+.bb li::before {
   content: '—';
   position: absolute;
   left: 0;
@@ -415,14 +415,14 @@ bb li::before {
    8. COMPACT PACKING COMPONENT
    ========================================================================== */
 
-tabs {
+.tabs {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
   border-bottom: 1px solid rgba(200, 135, 74, 0.18);
 }
 
-tab-btn {
+.tab-btn {
   border: none;
   background: transparent;
   color: #96aa88;
@@ -436,27 +436,27 @@ tab-btn {
   transition: all 0.25s;
 }
 
-tab-btn:hover {
+.tab-btn:hover {
   color: #c8a84b;
 }
 
-tab-btn.active {
+.tab-btn.active {
   color: #c8a84b;
   border-bottom-color: #c8a84b;
   font-weight: 600;
 }
 
-tab-panel { display: none; }
-tab-panel.active { display: block; }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
 
-pack-grid {
+.pack-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   gap: 12px;
   padding-top: 24px;
 }
 
-pack-item {
+.pack-item {
   background: rgba(44, 26, 14, 0.2);
   border: 1px solid rgba(200, 135, 74, 0.15);
   padding: 12px 16px;
@@ -467,7 +467,7 @@ pack-item {
   gap: 10px;
 }
 
-pack-item::before {
+.pack-item::before {
   content: '✓';
   color:  #c8a84b;
   font-weight: 700;
@@ -479,40 +479,40 @@ pack-item::before {
    9. HEALTH & SECURITY SEGMENTS
    ========================================================================== */
 
-safety-grid {
+.safety-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 24px;
 }
 
-safety-card {
+.safety-card {
   background: rgba(44, 26, 14, 0.25);
   border: 1px solid rgba(200, 135, 74, 0.15);
   padding: 24px;
   border-top: 3px solid #C8874A;
 }
 
-safety-card h5 {
+.safety-card h5 {
   font-size: 1.2rem;
   color:  #c8a84b;
   margin-bottom: 16px;
 }
 
-safety-card ul {
+.safety-card ul {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-safety-card li {
+.safety-card li {
   font-size: 0.95rem;
   color: rgba(245, 236, 215, 0.8);
   padding-left: 16px;
   position: relative;
 }
 
-safety-card li::before {
+.safety-card li::before {
   content: '›';
   position: absolute;
   left: 0;
@@ -521,31 +521,31 @@ safety-card li::before {
   line-height: 1.2;
 }
 
-health-grid {
+.health-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 16px;
 }
 
-health-item {
+.health-item {
   background: rgba(20, 13, 6, 0.3);
   border: 1px solid rgba(200, 135, 74, 0.15);
   padding: 20px;
   border-bottom: 2px solid  #c8a84b;
 }
 
-health-item .hi {
+.health-item .hi {
   font-size: 1.6rem;
   margin-bottom: 10px;
 }
 
-health-item h5 {
+.health-item h5 {
   font-size: 1.1rem;
   color:  #F5ECD7;
   margin-bottom: 6px;
 }
 
-health-item p {
+.health-item p {
   font-size: 0.88rem;
   color:#9C8060;
   font-weight: 300;
@@ -555,7 +555,7 @@ health-item p {
    10. INFORMATIONAL TIP BOX
    ========================================================================== */
 
-tip-box {
+.tip-box {
   background: rgba(44, 26, 14, 0.45);
   border: 1px solid rgba(200, 135, 74, 0.2);
   padding: 28px 32px;
@@ -565,24 +565,24 @@ tip-box {
   margin-top: 48px;
 }
 
-tip-icon {
+.tip-icon {
   font-size: 1.8rem;
   flex-shrink: 0;
 }
 
-tip-box h4 {
+.tip-box h4 {
   font-size: 1.3rem;
   color: #c8a84b;
   margin-bottom: 6px;
 }
 
-tip-box p {
+.tip-box p {
   font-size: 0.95rem;
   color: rgba(245, 236, 215, 0.75);
   font-weight: 300;
 }
 
-divider {
+.divider {
   border: none;
   border-top: 1px solid rgba(200, 135, 74, 0.15);
   margin: 0;
@@ -592,7 +592,7 @@ divider {
    11. FOOTER
    ========================================================================== */
 
-footer {
+.footer {
   background: #1b2319;
   border-top: 1px solid rgba(200, 135, 74, 0.2);
   padding: 44px 5vw 32px;
@@ -603,7 +603,7 @@ footer {
   gap: 16px;
 }
 
-footer-brand {
+.footer-brand {
   font-size: 1.3rem;
   color: #c8a84b;
   letter-spacing: 3px;
@@ -611,16 +611,16 @@ footer-brand {
   margin-bottom: 6px;
 }
 
-footer-left p {
+.footer-left p {
   font-size: 0.85rem;
   color: #9C8060;
 }
 
-footer-right {
+.footer-right {
   text-align: right;
 }
 
-footer-right p {
+.footer-right p {
   font-size: 0.8rem;
   color: rgba(245, 236, 215, 0.4);
   margin-bottom: 6px;
@@ -653,7 +653,7 @@ footer-right p {
     gap: 12px;
   }
 
-  nav ul {
+ . nav ul {
     gap: 14px;
     flex-wrap: wrap;
     justify-content: center;
@@ -663,18 +663,18 @@ footer-right p {
     padding: 0 20px;
   }
 
-  season-grid,
-  budget-grid {
+  .season-grid,
+  .budget-grid {
     grid-template-columns: 1fr;
   }
 
-  footer {
+  .footer {
     flex-direction: column;
     padding: 32px 24px;
     text-align: center;
   }
 
-  footer-right {
+  .footer-right {
     text-align: center;
   }
 
