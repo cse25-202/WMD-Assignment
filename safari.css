@@ -655,7 +655,7 @@ footer {
     gap: 12px;
   }
 
- . nav ul {
+  nav ul {
     gap: 14px;
     flex-wrap: wrap;
     justify-content: center;
@@ -665,12 +665,12 @@ footer {
     padding: 0 20px;
   }
 
-  .season-grid,
-  .budget-grid {
+  season-grid,
+  budget-grid {
     grid-template-columns: 1fr;
   }
 
-  .footer {
+  footer {
     flex-direction: column;
     padding: 32px 24px;
     text-align: center;
