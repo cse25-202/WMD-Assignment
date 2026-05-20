@@ -129,8 +129,8 @@ nav a.active::after {
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(circle at 20% 80%, rgba(200, 135, 74, 0.06) 0%, transparent 55%),
-    radial-gradient(circle at 80% 20%, rgba(212, 96, 26, 0.05) 0%, transparent 55%);
+   https://www.siyabona.com/images/kruger-park-safari-africa-01-810x300.jpg;
+    
   pointer-events: none;
 }
 
