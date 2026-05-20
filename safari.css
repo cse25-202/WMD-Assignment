@@ -34,10 +34,10 @@ nav a,
   font-family: 'Bebas Neue', sans-serif;
 }
 
-page-hero h2,
-section-title,
-info-card h5,
-faq-question {
+.page-hero h2,
+.section-title,
+.info-card h5,
+.faq-question {
   font-family: 'Playfair Display', serif;
 }
 
