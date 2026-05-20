@@ -607,6 +607,142 @@ section:has(.safety-grid) {
   font-weight: 300;
 }
 
+/* ==========================================================================
+   10. INFORMATIONAL TIP BOX
+   ========================================================================== */
+
+.tip-box {
+  background: rgba(44, 26, 14, 0.45);
+  border: 1px solid rgba(200, 135, 74, 0.2);
+  padding: 28px 32px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-top: 48px;
+}
+
+.tip-icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+
+.tip-box h4 {
+  font-size: 1.3rem;
+  color: #c8a84b;
+  margin-bottom: 6px;
+}
+
+.tip-box p {
+  font-size: 0.95rem;
+  color: rgba(245, 236, 215, 0.75);
+  font-weight: 300;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid rgba(200, 135, 74, 0.15);
+  margin: 0;
+}
+
+/* ==========================================================================
+   11. FOOTER
+   ========================================================================== */
+
+
+footer {
+  background: #1b2319;
+  border-top: 1px solid rgba(200, 135, 74, 0.2);
+  padding: 44px 5vw 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-brand {
+  font-size: 1.3rem;
+  color: #c8a84b;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.footer-left p {
+  font-size: 0.85rem;
+  color: #9C8060;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.footer-right p {
+  font-size: 0.8rem;
+  color: rgba(245, 236, 215, 0.4);
+  margin-bottom: 6px;
+}
+
+#social-links a {
+  color: #9C8060;
+  text-decoration: none;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-left: 16px;
+  transition: color 0.3s;
+}
+
+#social-links a:hover {
+  color:  #c8a84b;
+}
+
+
+/* ==========================================================================
+   12. MEDIA INTERVENTIONS (RESPONSIVENESS)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  header {
+    padding: 0 20px;
+    flex-direction: column;
+    height: auto;
+    padding: 16px 20px;
+    gap: 12px;
+  }
+
+  nav ul {
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .section-wrap {
+    padding: 0 20px;
+  }
+
+  season-grid,
+  budget-grid {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    flex-direction: column;
+    padding: 32px 24px;
+    text-align: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+
+  #social-links a {
+    margin: 0 8px;
+  }
+} 
+  
+    
+
 
  
 
