@@ -142,7 +142,7 @@ nav a.active::after {
 .section-label { 
   display: block; 
   font-family:'Bebas Neue', 'Jost', sans-serif;
-  color: #C8874A; 
+  color: #3c754b 
   letter-spacing: 3px; 
   margin-bottom: 10px;
 }
