@@ -123,6 +123,12 @@ nav a.active::after {
   background:
     linear-gradient(to bottom, rgba(20, 13, 6, 0.4) 0%, rgba(20, 13, 6, 0.85) 100%),
     radial-gradient(ellipse at 60% 40%, #7A4E2D; 0%, #2C1A0E; 60%, #140D06; 100__);
+  background-image:
+    linear-gradient(to bottom, rgba(20, 13, 6, 0.55) 0%, rgba(20, 13, 6, 0.88) 100%),
+    url('https://machabasafaris.com/application/files/5416/9519/3897/machaba-web-experience-wildlife-game-drive-lion.jpg?fID=6717&d=0&s=w1200');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   overflow: hidden;
 }
 
@@ -385,6 +391,12 @@ nav a.active::after {
 
 #faq {
   padding: 80px 0;
+  background-image:
+    linear-gradient(to bottom, rgba(20, 13, 6, 0.86) 0%, rgba(20, 13, 6, 0.82) 100%),
+    url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz5dXmYMWUZizyJ9jlh6pzzcZIVJDo9-VKiQ&s');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .faq-list {
@@ -568,4 +580,3 @@ footer {
     margin: 0 8px;
   }
 }
-    
