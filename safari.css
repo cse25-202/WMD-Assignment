@@ -132,11 +132,11 @@ nav a.active::after {
   position: absolute;
   inset: 0;
   background-image:
-   radial-gradient(circle at 20% 80%, rgba(200, 135, 74,0.08) 0% transparent 50%),
-   radial-gradient(circle at 80% 20%, rgba(212, 96, 26, 0.06) 0%,transparent 50_);
+   radial-gradient(circle at 20% 80%, rgba(200, 135, 74,0.08) 0%,  transparent 50%),
+   radial-gradient(circle at 80% 20%, rgba(212, 96, 26, 0.06) 0%, transparent 50_);
   pointer-events: none;
 }
-
+.hero-tag,
 .hero-eyebrow {
   letter-spacing: 6px;
   font-size: 0.8rem;
