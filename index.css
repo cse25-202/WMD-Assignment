@@ -142,7 +142,7 @@ nav a.active::after {
 .section-label { 
   display: block; 
   font-family:'Bebas Neue', 'Jost', sans-serif;
-  color: #3c754b 
+  color: #3c754b; 
   letter-spacing: 3px; 
   margin-bottom: 10px;
 }
@@ -157,11 +157,11 @@ nav a.active::after {
 
 .mission-card {
   padding: 2rem;
-  border: 1px solid #1e4729 
+  border: 1px solid #1e4729 ;
   background: rgba(122, 78, 45, 0.1);
 }
 
-.mission-card h3 { font-family: 'Bebas Neue', 'Jost', sans-serif; color: #c8a84b; margin-bottom: 10px; }
+.mission-card h3 { font-family: 'Bebas Neue', 'Jost', sans-serif; color: #0e1710; margin-bottom: 10px; }
 
 /* ==========================================================================
    BIG FIVE GALLERY
