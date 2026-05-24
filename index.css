@@ -212,7 +212,7 @@ nav a.active::after {
 }
 
 .animal-card__name {
-  font-family: ''Playfair Display', serif;
+  font-family: 'Playfair Display', serif;
   font-size: 1.5rem;
   color: #F5ECD7; 
 }
@@ -282,6 +282,33 @@ footer {
 .footer__social { display: flex; gap: 15px; margin-bottom: 10px; }
 .footer__social a { font-family: 'Bebas Neue', 'Jost', sans-serif; font-size: 0.8rem; color: #9C8060; }
 .footer__copy { font-size: 0.8rem; color: #9C8060; }
+
+ MOBILE NAVIGATION
+   ========================================================================== */
+
+/* Hide hamburger button on desktop */
+#menuToggle {
+  display: none;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+
+  /* Hide nav by default on mobile */
+  #mainNav {
+    display: none;
+  }
+
+  /* Show nav when open class is toggled by JavaScript */
+  #mainNav.open {
+    display: block;
+  }
+
+  /* Show hamburger button only on mobile */
+  #menuToggle {
+    display: block;
+  }
+}
 
 
 
