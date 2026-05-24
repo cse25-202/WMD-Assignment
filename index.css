@@ -193,7 +193,7 @@ nav a.active::after {
 .animal-card__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, #140D06; , transparent);
+  background: linear-gradient(to top, #140D06 , transparent);
 }
 
 .animal-card__num {
