@@ -128,7 +128,7 @@ nav a.active::after {
   text-align: center;
   padding: 80px 5vw 60px;
   background:
-    radial-gradient(ellipse at 50% 30%, #2a3d1e 0%, #1a2318 50%, #140D06 100__);
+    radial-gradient(ellipse at 50% 30%, #2a3d1e 0%, #1a2318 50%, #140D06 100%);
   overflow: hidden;
 }
 
