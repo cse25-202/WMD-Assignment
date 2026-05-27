@@ -285,28 +285,18 @@ footer {
 
  MOBILE NAVIGATION
    ========================================================================== */
-
-/* Hide hamburger button on desktop */
-#menuToggle {
-  display: none;
-}
-
-/* Mobile styles */
 @media (max-width: 768px) {
-
-  /* Hide nav by default on mobile */
-  #mainNav {
-    display: none;
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 16px 24px;
+    gap: 12px;
   }
 
-  /* Show nav when open class is toggled by JavaScript */
-  #mainNav.open {
-    display: block;
-  }
-
-  /* Show hamburger button only on mobile */
-  #menuToggle {
-    display: block;
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
   }
 }
 
